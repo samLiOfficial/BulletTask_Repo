@@ -13,9 +13,21 @@ struct ErrorView: View {
     
     var body: some View {
         VStack {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(.system(size: 50))
+                .foregroundColor(.red)
+                .padding()
+            
             Text(errorMessage)
                 .font(.title)
-                .foregroundColor(.red)
+                .foregroundColor(.black)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.black, lineWidth: 1)
+                )
+                .padding()
         }
+        .background(Color.white)
     }
 }
